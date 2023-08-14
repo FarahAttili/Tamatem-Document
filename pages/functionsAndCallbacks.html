@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tamatem Document</title>
+<link rel="stylesheet" href="../stylings/document.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<link href="../stylings/prism.css" rel="stylesheet">
+<script src="../javaSpt/prism.js"></script>
+<script src="../javaSpt/document.js"></script>
+
+</head>
+<body>
+    <div class="component">
+        <h3 class="title">Available Functions & Callbacks:</h3>
+        <p class="textDescription">Tamatem Plus SDK allows you to connect your users with the Tamatem ID through our public functions. The following functions can be
+            used by accessing the singleton instance “TamatemConnectPlugin.Instance”:</p>
+            <ol>
+                <li class="">Connect: Call TamatemConnectPlugin.Instance.Connect() to connect the user to Tamatem Plus. You can use the callback function
+                    TamatemConnectPlugin.Instance.OnUserConnected. You can also use the callback function
+                    TamatemConnectPlugin.Instance.OnRedirectedToApp to place any logic needed when the user is redirected to the app during the
+                    connection process.</li>
+                <li class="">GetConnectionStatus: Call TamatemConnectPlugin.Instance.GetConnectionStatus() to check if the user is connected or not. You
+                    can use the callback function TamatemConnectPlugin.Instance.OnGetConnectionStatus.</li>
+                <li class=""> GetInventoryItems: Call TamatemConnectPlugin.Instance.GetInventoryItems(string isRedeemed) to get the items purchased by
+                    the user on Tamatem Plus. Send “true” to get the redeemed items, “false” to get the unredeemed items and “all” to get all the items. You
+                    can use the callback function TamatemConnectPlugin.Instance.OnGetInventoryItems.
+                    </li>
+                <li class="">. RedeemAllItems: Call TamatemConnectPlugin.Instance.RedeemAllItems() to redeem all items. You can use the callback function
+                    TamatemConnectPlugin.Instance.OnAllItemsRedeemed.</li>
+                <li class=""> GetUserInfo: Call TamatemConnectPlugin.Instance.GetUserInfo() to get the user data from Tamatem Plus. You can use the callback
+                    function TamatemConnectPlugin.Instance.OnGetUserInfo.
+                    </li>
+                <li class="">Logout: Call TamatemConnectPlugin.Instance.Logout() to clear the Tamatem user session and clear the stored data on the device
+                    (Please note that this will NOT delete the stored data from Tamatem Plus records). You can use the callback function
+                    TamatemConnectPlugin.Instance.OnLogout.
+                    </li>
+                
+            </ol>
+            <div class="information">You can find an example script to check out how these functions are used. To access this script, please go to Assets →
+                TamatemConnect → Examples→ ExampleScripts → TamatemConnectExampleScript.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+* { 
+    font-size: 14px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    cursor: default;
+    
+}
+/* Side navigation bar related stylings */
+.sideNav {
+    float: left;
+    height: 100%;
+    min-width: max-content;
+    background: #212529;
+    padding-top: 40px;
+    padding-left: 0px;
+    color:white;
+    position:fixed;
+    top:0px;
+    left:0px;
+}
+
+.logo{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    left: 30px;   
+}
+#logoImg{
+    width: 45px;
+    float: left;
+    margin-right: 15px;
+}
+.listOfItems{
+    position:relative;
+    top: 80px;
+}
+.navItem li.active {
+    background-color: #ccc;
+}
+.navItem{
+    position: relative;
+    margin-top: 5px;
+    display: block;
+    height: fit-content;
+    color: white;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    /* background-color: #ffaa00; */
+}
+.downArrow{
+    width: 15px;
+    position: relative;
+    right: 3px;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    /*which one to use */
+    /* background-color: #737678; */
+    /* font-weight: bold; */
+    white-space: nowrap;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.subItemsContainer{
+    display: none;
+}
+.sideNavFooter{
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+}
+
+/* View page related stylings */
+#viewPage{
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    top:5%;
+    left: 25%;
+    padding-left:15%;
+    padding-right: 10%;
+    overflow: hidden;
+}
+iframe{
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+
+}
+
+.textDescription{
+    width: fit-content;
+    height: fit-content;
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.note{
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: #f0c2e0 ;
+    border-left: 4px #b82e8a solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.errorHandling{
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: #ffb3b3 ;
+    border-left: 4px #ff0000 solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.warning{
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: #ffe6b3 ;
+    border-left: 4px #ffaa00 solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.information{
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: #ccccff ;
+    border-left: 4px #0000ff solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.done{
+    position: relative;
+    width: 90%;
+    height: fit-content;
+    background-color: #b3ffb3 ;
+    border-left: 4px #009900 solid;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
