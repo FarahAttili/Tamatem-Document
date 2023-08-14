@@ -21,7 +21,7 @@
         <div class="listOfItems">
             <ul class="mainUnorderdList">
                 <div class="listItem">
-                <li class="navItem" onclick="showList('one')">Unity SDK <img class="downArrow" src="./images/white-down-arrow-png.png" onclick="showList('one')"></li><!--first item of the main list-->
+                <li class="navItem" onclick="showList(event, 'one')">Unity SDK <img class="downArrow" src="./images/white-down-arrow-png.png" onclick="showList(event, 'one')"></li><!--first item of the main list-->
                     <ul class="subItemsContainer" id="one">
                         <li class="navItem" onclick="navigate('pages/introduction.html')">Introduction</li><!--first item of a sub list-->
                         <li class="navItem" onclick="navigate('pages/connectionTesting.html')">Connection Testing</li><!--first item of a sub list-->
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="listItem">
-                <li class="navItem" onclick="showList('two')">Building the example scene <img class="downArrow" src="./images/white-down-arrow-png.png" onclick="showList('two')"></li>
+                <li class="navItem" onclick="showList(event, 'two')">Building the example scene <img class="downArrow" src="./images/white-down-arrow-png.png" onclick="showList(event, 'two')"></li>
                     <ul class="subItemsContainer" id="two">
                         <li class="navItem" onclick="navigate('pages/buildingForAndroid.html')">For Android</li><!--first item of a sub list-->
                         <li class="navItem" onclick="navigate('pages/buildingForIOS.html')">For IOS</li><!--first item of a sub list-->

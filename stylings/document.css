@@ -53,9 +53,10 @@
 }
 .downArrow{
     width: 15px;
-    position: relative;
-    right: 3px;
+    position: absolute;
+    right: 12px;
     cursor: pointer;
+    transition: 300ms;
 }
 
 .navItem:hover {
@@ -154,4 +155,7 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+.rotate {
+    transform: rotate(-90deg);
 }
