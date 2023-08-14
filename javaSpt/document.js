@@ -23,12 +23,23 @@ function showList(e, divID) {
   }
 }
 
-function getCurrentYear() {
+// function getCurrentYear() {}
+function showList(divID)
+{
+    let Id = divID.toString();
+    var list = document.getElementById(Id);
+    if (list.style.display === "none") {
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+}
+function getCurrentYear()
+{
     const d = new Date();
     let year = d.getFullYear();
     document.getElementById("currentYear").innerHTML = year.toString();
 }
-
 function openTab(event, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("viewPage");
@@ -77,3 +88,9 @@ function navigate(url) {
       console.error(error);
     });
 }
+
+const mainFrame = document.getElementById("main-frame");
+
+// function navigate(path) {
+//   document.getElementById("main-frame").setAttribute('src', path);
+// }
