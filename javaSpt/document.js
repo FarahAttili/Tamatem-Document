@@ -45,6 +45,21 @@ function loadContent(path) {
 
 const mainFrame = document.getElementById("main-frame");
 
-function navigate(path) {
-  document.getElementById("main-frame").setAttribute('src', path);
+
+function navigate(url) {
+  const container = document.getElementById('viewPage');
+  window.scrollTo(0, 0)
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response Error');
+      }
+      return response.clone().text();
+    })
+    .then(content => {
+      container.innerHTML = content;
+    })
+    .catch(error => {
+      console.error(error);
+    });
 }
