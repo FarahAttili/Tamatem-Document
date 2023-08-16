@@ -6,9 +6,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <link href="../stylings/prism.css" rel="stylesheet">
-<script src="../javaSpt/prism.js"></script>
 <script src="../javaSpt/document.js"></script>
-
+<script src="../javaSpt/prism.js"></script>
 </head>
 <body>
     <div class="component">
@@ -17,29 +16,25 @@
             SDK, you have to at least use the following four functions:</p>
             <ol>
                 <li class="">You need to start by connecting the user to Tamatem Plus, or you won’t be able to use the other functions.<br>
-                    <pre><code class="language-javascript">TamatemConnectPlugin.Instance.Connect();
-                    </code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">TamatemConnectPlugin.Instance.Connect();</code></pre>
                 </li>
                 <li class="">. You need to get the inventory to know which items purchased by the player on Tamatem Plus will be redeemed. This will help you know
                     what you need to give the user inside your game after you redeem their items on Tamatem Plus.
                     <br>
-                    <pre><code class="language-javascript">TamatemConnectPlugin.Instance.GetInventoryItems("false");
-                    </code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">TamatemConnectPlugin.Instance.GetInventoryItems("false");</code></pre>
                 </li>
                 <li class="">This needs to be called after you get the inventory items to redeem them on Tamatem Plus. Please take a look at the following example:<br>
-                    <pre><code class="language-javascript">TamatemConnectPlugin.Instance.RedeemAllItems();
-                    </code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">TamatemConnectPlugin.Instance.RedeemAllItems();</code></pre>
                 </li>
                 <li class="">If the user is connected with Tamatem ID, please call the Logout function wherever you logout logic exists
                     <br>
-                    <pre><code class="language-javascript">TamatemConnectPlugin.Instance.Logout();
-                    </code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">TamatemConnectPlugin.Instance.Logout();</code></pre>
                 </li>
             </ol>
     </div>
     <div class="component">
         <h3 class="title">Full Code Snippet for the minimum integration</h3>
-        <pre><code class="language-csharp">
+        <pre class="language-csharp"><code class="language-csharp">
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -115,8 +110,9 @@ public class SceneReferencesScript : MonoBehaviour
 }
  
 </code></pre>
-        <div class="warning">Don’t forget to include the TamatemConnect namespace</div>
-        <div class="errorHandling">When you use TamatemConnectPlugin.Instance.RedeemAllItems(), you need to check whether the call was a success or not. In
+        <div class="warning"><i class="fa-solid fa-triangle-exclamation" style="color: #ffaa00;"></i>Don’t forget to include the TamatemConnect namespace</div>
+        <h4>Error handling</h4>
+        <div class="errorHandling"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;"></i>When you use TamatemConnectPlugin.Instance.RedeemAllItems(), you need to check whether the call was a success or not. In
             the previous code snippet, we show you how to do that.</div>
 </div> 
 

@@ -9,27 +9,28 @@
 .sideNav {
     float: left;
     height: 100%;
-    min-width: max-content;
+    min-width: 250px;
     background: #212529;
     padding-top: 40px;
-    padding-left: 0px;
     color:white;
     position:fixed;
-    top:0px;
-    left:0px;
 }
-
+.txtLogo{
+    cursor: pointer; 
+}
 .logo{
     height: fit-content;
     width: fit-content;
     position: absolute;
     top: 30px;
-    left: 30px;   
+    left: 30px; 
+    cursor: pointer;  
 }
 #logoImg{
     width: 45px;
     float: left;
     margin-right: 15px;
+    cursor: pointer; 
 }
 .listOfItems{
     position:relative;
@@ -45,16 +46,19 @@
     height: fit-content;
     color: white;
     border-radius: 5px;
-    padding-left: 5px;
-    margin-right: 5px;
+    padding-right: 5px;
     white-space: nowrap;
     cursor: pointer;
     /* background-color: #ffaa00; */
 }
+.navItem:active{
+    /* color: red; */
+}
+
 .downArrow{
     width: 15px;
     position: absolute;
-    right: 12px;
+    right: 3px;
     cursor: pointer;
     transition: 300ms;
     /* right: 3px; */
@@ -69,24 +73,31 @@
     cursor: pointer;
 }
 .subItemsContainer{
-    display: none;
+    /* display: none; */
 }
 .sideNavFooter{
     position: fixed;
     bottom: 5px;
     left: 10px;
 }
+.mainUnorderdList{
+    padding: 1rem;
+}
 
 /* View page related stylings */
+.banner{
+    margin-bottom: 30px ;
+}
 #viewPage{
     width: 75%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     position: absolute;
     top:5%;
     left: 25%;
     padding-left:15%;
     padding-right: 10%;
-    overflow: hidden;
+    padding-bottom: 20px;
 }
 iframe{
     overflow: auto;
@@ -103,9 +114,21 @@ iframe{
     font-weight: bold;
     font-size: 20px;
 }
+li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.auto-sizing-text {
+    font-size: min(max(16px, 4vw), 32px);
+  }
+i {
+    font-size: 18px;
+    margin-right: 10px;
+}
 .note{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: fit-content;
     background-color: #f0c2e0 ;
     border-left: 4px #b82e8a solid;
@@ -113,10 +136,11 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .errorHandling{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: fit-content;
     background-color: #ffb3b3 ;
     border-left: 4px #ff0000 solid;
@@ -124,10 +148,11 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .warning{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: fit-content;
     background-color: #ffe6b3 ;
     border-left: 4px #ffaa00 solid;
@@ -135,10 +160,11 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .information{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: fit-content;
     background-color: #ccccff ;
     border-left: 4px #0000ff solid;
@@ -146,10 +172,11 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .done{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: fit-content;
     background-color: #b3ffb3 ;
     border-left: 4px #009900 solid;
@@ -157,7 +184,14 @@ iframe{
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
 }
 .rotate {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
+}
+.github-link{
+    border: #aaa solid 0.5px;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 1px 1px #aaa ;
 }

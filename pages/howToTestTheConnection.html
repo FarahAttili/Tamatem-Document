@@ -26,29 +26,30 @@
                 <li class="">We have the Newtonsoft.Json library included in the package. If you already have it in your project, please exclude it when you import
                     the package.</li>
                 <li class="">Enter your client ID and redirect URI. From the menu bar, go to Tamatem → Connect Settings, and enter your correct information.<br>
-                    <img src="../images/TamatemConnectSettings.png" alt="" style="width: 200px; margin-bottom: 20px;">
+                    <img src="../images/TamatemConnectSettings.png" alt="" style="width: 50%; margin-bottom: 20px;">
 
                 </li>
                 <li class="">Open our example scene. In the “Project” tab, Go to TamatemConnect → Example → ExampleScenes and double-click the
                     ConnectExample scene.
                     <br>
-                    <img src="../images/ExampleScene.png" alt="" style="width: 200px; margin-bottom: 20px;">
+                    <img src="../images/ExampleScene.png" alt="" style="width: 50%; margin-bottom: 20px;">
 
                 </li>
                 <li class="">Add the ConnectExample scene to “Scenes in Build” by going to File → Build Settings → Add Open Scenes.<br>
-                    <img src="../images/BuildSettings1.png" alt="" style="width: 200px; margin-bottom: 20px;">
+                    <img src="../images/BuildSettings1.png" alt="" style="width: 50%; margin-bottom: 20px;">
 
                 </li>
 
             </ol>
 
-            <div class="warning">
-                <ol>
+            <div class="warning auto-sizing-text ">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #ffaa00;"></i>
+                <ul class="ol-warning">
                     <li class="">Client ID is your game id into Tamatem Plus system, we will provide you with once integration starts.
                     </li>
                     <li class="">Redirect URI: The link is the game link where the user will be redirected back after finishing the authorization process to continue
                         the journey. For a better user experience, we would recommend you use the following format (companynamegamename://companyname).</li>
-                </ol>
+                </ul>
             </div>
     </div>
     <div class="component">
@@ -57,7 +58,7 @@
                 <li class="">From “Build Settings”, under “Platform”, choose Android and click on “Switch Platform”.</li>
                 <li class=""> Go to Player Settings → Other Settings and make sure you change the “Scripting Backend” to “IL2CPP” and include both the “ARMv7”
                     and “ARM64” Target Architectures.<br>
-                    <img src="../images/PlayerSettingsAndroidV1.1.0.png" alt="" style="width: 500px; margin-bottom: 20px;">
+                    <img src="../images/PlayerSettingsAndroidV1.1.0.png" alt="" style="width: 90%; margin-bottom: 20px;">
                 </li>
                 <li class="">Go to Player Settings → Publishing Settings and check the Custom Main Manifest option. This will generate a custom manifest file that
                     you can find in Assets → Plugins → Android. Open this file and add a new <intent-filter>, add the following four lines inside, and save the
@@ -65,15 +66,15 @@
                     <br>
                     <img src="../images/AndroidPublishingSettings.png" alt="" style="width: 90%; margin-bottom: 20px;">
                 </li>
-                <pre><code class="language-xml">
-                    <intent-filter>
-                        <action android:name ="android.intent.action.VIEW" />
-                        <category android:name="android.intent.category.DEFAULT"/>
-                        <category android:name ="android.intent.category.BROWSABLE" />
-                        <data android:scheme="companyname-gamename" android:host="companyname"/>
-                    </intent-filter>                       
-                </code></pre>
-                <div class="warning">
+                <!-- for the XML code the (`&lt` == `<`) and the (`&gt`==`>`) -->
+                <pre><code class="language-markup">&ltintent-filter&gt
+    &ltaction android:name ="android.intent.action.VIEW" /&gt
+    &ltcategory android:name="android.intent.category.DEFAULT"/&gt
+    &ltcategory android:name ="android.intent.category.BROWSABLE" /&gt
+    &ltdata android:scheme="companyname-gamename" android:host="companyname"/&gt
+&lt/intent-filter&gt </code></pre>
+                <div class="warning" >
+                    <i class="fa-solid fa-triangle-exclamation" style="color: #ffaa00;"></i>
                     Do not forget to replace the “companyname-gamename” and the “companyname” with the actual info that you used in the redirect
                     URI. Without this you will not be able to complete the connection process.
                 </div>
@@ -86,7 +87,7 @@
                 <li class="">From “Build Settings”, under “Platform”, choose Android and click on “Switch Platform”.</li>
                 <li class=""> Go to Player Settings → Other Settings and make sure you change the “Scripting Backend” to “IL2CPP” and include both the “ARMv7”
                     and “ARM64” Target Architectures.<br>
-                    <img src="../images/PlayerSettingsiOSV1.1.0.png" alt="" style="width: 500px; margin-bottom: 20px;">
+                    <img src="../images/PlayerSettingsiOSV1.1.0.png" alt="" style="width: 90%; margin-bottom: 20px;">
                 </li>
                 <li class="">Click on Build and create a new folder for the exported Xcode project.</li>
                 <li class=""> Open the exported Xcode project.</li>
@@ -98,6 +99,5 @@
                 <li class="">Click on Play in Xcode.</li>
             </ol>
     </div>
-
 </body>
 </html>
