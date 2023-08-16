@@ -51,10 +51,6 @@
     cursor: pointer;
     /* background-color: #ffaa00; */
 }
-.navItem:active{
-    /* color: red; */
-}
-
 .downArrow{
     width: 15px;
     position: absolute;
@@ -194,4 +190,7 @@ i {
     border-radius: 5px;
     padding: 2px;
     box-shadow: 1px 1px #aaa ;
+}
+.active-link {
+    text-decoration: underline !important;
 }

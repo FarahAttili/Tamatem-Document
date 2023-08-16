@@ -27,8 +27,16 @@ function getCurrentYear()
     document.getElementById("currentYear").innerHTML = year.toString();
 }
 //! Main Navigation Function
-function navigate(url) {
+function navigate(e, url) {
   const container = document.getElementById('viewPage');
+  //! Grabbing all the navigation links to remove active class
+  const navLinks = document.querySelectorAll(".navItem");
+  navLinks.forEach(link => {
+    link.classList.remove("active-link");
+  })
+  //! Adding class active to the event target
+  const activeLink = e.target;
+  activeLink.classList.add("active-link");
 
   window.scrollTo(0, 0);
 
