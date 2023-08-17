@@ -49,7 +49,6 @@
     padding-right: 5px;
     white-space: nowrap;
     cursor: pointer;
-    /* background-color: #ffaa00; */
 }
 .downArrow{
     width: 15px;
@@ -57,19 +56,11 @@
     right: 3px;
     cursor: pointer;
     transition: 300ms;
-    /* right: 3px; */
 }
-
 .navItem:hover {
-    /*which one to use */
-    /* background-color: #737678; */
-    /* font-weight: bold; */
     white-space: nowrap;
     text-decoration: underline;
     cursor: pointer;
-}
-.subItemsContainer{
-    /* display: none; */
 }
 .sideNavFooter{
     position: fixed;
@@ -95,13 +86,6 @@
     padding-right: 10%;
     padding-bottom: 20px;
 }
-iframe{
-    overflow: auto;
-    height: 100%;
-    width: 100%;
-
-}
-
 .textDescription{
     width: fit-content;
     height: fit-content;
@@ -189,6 +173,7 @@ i {
     border: #aaa solid 0.5px;
     border-radius: 5px;
     padding: 2px;
+    padding-top: 4px;
     box-shadow: 1px 1px #aaa ;
 }
 .active-link {

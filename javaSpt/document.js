@@ -36,7 +36,9 @@ function navigate(e, url) {
   })
   //! Adding class active to the event target
   const activeLink = e.target;
-  activeLink.classList.add("active-link");
+  if(activeLink.classList.contains('navItem')) {
+    activeLink.classList.add("active-link");
+  }
 
   window.scrollTo(0, 0);
 

@@ -12,12 +12,11 @@
 <script src="https://kit.fontawesome.com/6d77083198.js" crossorigin="anonymous"></script>
 </head>
 
-</head>
 <body onload="getCurrentYear()">
     <div class="sideNav col-3" >
-        <div class="logo" onclick="navigate('pages/tamatemID.html')" >
-        <img src="images/Tamatem_Games_2022_Logo.svg.png" alt="Tamatem Plus Logo" id="logoImg">
-        <div class="txtLogo"><span class="txtLogoSPN" >Tamatem Plus Developer Guide</span>
+        <div class="logo" onclick="navigate(event, './pages/tamatemID.html')" >
+        <img src="images/Tamatem_Games_2022_Logo.svg.png" alt="Tamatem Plus Logo" id="logoImg" onclick="navigate(event, './pages/tamatemID.html')">
+        <div class="txtLogo"><span class="txtLogoSPN" onclick="navigate(event, './pages/tamatemID.html')">Tamatem Plus Developer Guide</span>
         </div>
         </div>
         <div class="listOfItems">
@@ -28,9 +27,9 @@
                         <li class="navItem" onclick="navigate(event, './pages/introduction.html')">Introduction</li>
                         <li class="navItem" onclick="navigate(event, './pages/whereToGetTheSDK.html')">Where to get the SDK?</li>
                         <li class="navItem" onclick="navigate(event, './pages/howToTestTheConnection.html')">How to test the connection?</li>
-                        <li class="navItem" onclick="navigate(event, './pages/tamatemConnectWorkflow.html')">Tamatem Connect Workflow</li>
-                        <li class="navItem" onclick="navigate(event, './pages/integrationRequirements.html')">Integration Requirements</li>
-                        <li class="navItem" onclick="navigate(event, './pages/functionsAndCallbacks.html')">Available Functions & Callbacks</li>
+                        <li class="navItem" onclick="navigate(event, './pages/tamatemConnectWorkflow.html')">Tamatem connect workflow</li>
+                        <li class="navItem" onclick="navigate(event, './pages/integrationRequirements.html')">Integration requirements</li>
+                        <li class="navItem" onclick="navigate(event, './pages/functionsAndCallbacks.html')">Available functions & callbacks</li>
                     </ul>
                 </div>
             </ul>

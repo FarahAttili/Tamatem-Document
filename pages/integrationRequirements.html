@@ -9,6 +9,7 @@
 <script src="../javaSpt/document.js"></script>
 <script src="../javaSpt/prism.js"></script>
 </head>
+
 <body>
     <div class="component">
         <h3 class="title">Minimum Integration Requirements:</h3>
@@ -34,8 +35,7 @@
     </div>
     <div class="component">
         <h3 class="title">Full Code Snippet for the minimum integration</h3>
-        <pre class="language-csharp"><code class="language-csharp">
-using System.Collections;
+        <pre class="language-csharp"><code class="language-csharp">using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TamatemConnect;
@@ -108,15 +108,11 @@ public class SceneReferencesScript : MonoBehaviour
         }
     }
 }
- 
 </code></pre>
         <div class="warning"><i class="fa-solid fa-triangle-exclamation" style="color: #ffaa00;"></i>Don’t forget to include the TamatemConnect namespace</div>
         <h4>Error handling</h4>
         <div class="errorHandling"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;"></i>When you use TamatemConnectPlugin.Instance.RedeemAllItems(), you need to check whether the call was a success or not. In
             the previous code snippet, we show you how to do that.</div>
 </div> 
-
-
-
 </body>
 </html>
