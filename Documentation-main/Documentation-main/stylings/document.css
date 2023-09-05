@@ -1,0 +1,405 @@
+* { 
+    font-size: 16px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    cursor: default;
+    box-sizing: border-box;
+}
+#invisible{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    top:0px;
+    z-index: 2;
+    /* background-color:rgba(0,0,0,0.2); */
+}
+.forLongWords{
+    display: none;
+}
+.messageRequest{
+    overflow-wrap: anywhere;
+
+}
+#showNavBarBtn{
+    display: none;
+    background-color: white;
+    border: white solid 0px;
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+#hideNavBarBtn{
+    display: none;
+    background-color: #212529;
+    border: #212529 solid 0px;
+    position: absolute;
+    display: flex;
+    color: white;
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+}
+
+/* **************************** Side navigation bar styles ******************************* */
+.sideNav {
+    display: block;
+    float: left;
+    height: 100%;
+    /* min-width: fit-content; */
+    min-width: 330px;
+    background: #212529;
+    padding-top: 40px;
+    color:white;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.txtLogo{
+    cursor: pointer; 
+    font-size: 17px;
+}
+.logo{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    left: 30px; 
+    cursor: pointer;  
+}
+#logoImg{
+    width: 45px;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer; 
+}
+.listOfItems{
+    position:relative;
+    top: 80px;
+}
+.navItem li.active {
+    background-color: #ccc;
+}
+.navItem{
+    position: relative;
+    margin-top: 5px;
+    height: fit-content;
+    color: white;
+    border-radius: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+li.navItem{
+    list-style-type:none;
+
+}
+.downArrow{
+    width: 15px;
+    position: absolute;
+    right: 3px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.navItem:hover {
+    white-space: nowrap;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sideNavFooter{
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+}
+.mainUnorderdList{
+    padding: 1rem;
+}
+
+/* ************************************** View page styles **************************************** */
+.banner{
+    margin-bottom: 30px ;
+    width: 100%;
+}
+#viewPage{
+    width: 75%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    top:5%;
+    left: 25%;
+    padding-left:15%;
+    padding-right: 10%;
+    padding-bottom: 20px;
+}
+.textDescription{
+    width: fit-content;
+    height: fit-content;
+}
+.title{
+    font-weight: bold;
+    font-size: 25px;
+}
+li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+.auto-sizing-text {
+    font-size: min(max(16px, 4vw), 32px);
+  }
+  .rotate {
+    transform: rotate(90deg);
+}
+.github-link{
+    border: #aaa solid 0.5px;
+    border-radius: 5px;
+    padding: 2px;
+    padding-top: 4px;
+    box-shadow: 1px 1px #aaa ;
+}
+.active-link {
+    text-decoration: underline !important;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+    width: 100%;
+    border: 1px solid #dddddd;
+  }
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    position: relative;
+    padding: 8px;
+}
+th{
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: #f4f4f4;
+    position: relative;
+}
+.messageRequest{
+    border: #ddd 1px solid;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    padding: 5px;
+    margin: 10px;
+}
+h4{
+    font-size: 20px;
+}
+.copyBtn{
+    border:white solid 0px;
+    background-color: #ffffff;
+    color: #212529;
+    position: relative;
+    left: 95%; 
+}
+/* ************************************** Notes styles ************************************** */
+.note ,.errorHandling ,.warning ,.information ,.done{
+    position: relative;
+    width: 95%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    overflow-wrap: anywhere;
+}
+.note{
+    background-color: #ffe4f6 ;
+    border-left: 4px #cb76af solid;
+}
+.errorHandling{
+    background-color: #fdd7d7 ;
+    border-left: 4px #ff4141 solid;
+}
+.warning{
+    background-color: #ffe6b3 ;
+    border-left: 4px #ffaa00 solid;
+}
+.information{
+    background-color: #e3e3f7 ;
+    border-left: 4px #6161ff solid;
+}
+.done{
+    background-color: #d8f7d8 ;
+    border-left: 4px #5eaf5e solid;
+}
+i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* ***************************************** Media Queries********************************************** */
+/* ************************************** for small screens ******************************************** */
+@media screen and (max-width: 376px) {
+.forLongWords{
+    display: block;
+}
+#showNavBarBtn{
+    display: block;
+    background-color: white;
+    border: white solid 0px;
+    position: absolute;
+    top:10px;
+    left:10px
+    
+}
+#hideNavBarBtn{
+    display: none;
+    background-color: #212529;
+    border: #212529 solid 0px;
+    position: absolute;
+    display: flex;
+    color: white;
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+}
+.sideNav{
+    /* display: none; */
+    left:-500px;
+    transition: 300ms;
+
+}
+#viewPage{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:10%;
+    left: 0%;
+    padding-bottom: 20px;
+    overflow: unset;
+}
+.banner{
+    margin-bottom: 30px ;
+    width: 100%;
+}
+}
+/* ************************************** for medium screens ******************************************** */
+@media screen and (min-width: 376px) and (max-width : 800px){
+.forLongWords{
+    display: block;
+}
+#showNavBarBtn{
+    display: block;
+    background-color: white;
+    border: white solid 0px;
+    position: absolute;
+    top:10px;
+    left:10px
+    
+}
+#hideNavBarBtn{
+    display: none;
+    background-color: #212529;
+    border: #212529 solid 0px;
+    position: absolute;
+    display: flex;
+    height: 20px;
+}
+.sideNav{
+    /* display: none; */
+    left:-500px;
+    transition: 300ms;
+}
+#viewPage{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:10%;
+    left: 0%;
+    padding-bottom: 20px;
+
+}
+.banner{
+    margin-bottom: 30px ;
+    width: 100%;
+}
+}
+/* ************************************** for large screens ******************************************** */
+@media screen and (min-width: 801px){
+/* p {
+    background-color: red;
+} */
+.forLongWords{
+    display: none;
+}
+#showNavBarBtn{
+    display: none;
+    background-color: white;
+    border: white solid 0px;
+    position: absolute;
+    top:10px;
+    left:10px
+    
+}
+#hideNavBarBtn{
+    display: none;
+    background-color: #212529;
+    border: #212529 solid 0px;
+    position: absolute;
+    display: flex;
+    height: 20px;
+}
+.sideNav{
+    display: block;
+    float: left;
+    height: 100%;
+    min-width: 350px;
+    background: #212529;
+    padding-top: 40px;
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;    
+}
+#invisible{
+    display: none;
+    }
+}
+
+.exampleRequestRespons{
+    background-color: #fafafa;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.divTitle{
+    text-align: center;
+}
+.tab {
+  overflow: hidden;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+.tab button:hover {
+  background-color: #aaa;
+}
+
+.tab button.active {
+border-bottom: orange 4px solid ;
+}
+
+.tabcontent {
+  display: none;
+  padding: 10px;
+  border-top: none;
+}
